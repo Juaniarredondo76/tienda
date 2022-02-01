@@ -5,13 +5,13 @@ export function llenarTienda(){
         {nombre:"aretes",precio:150000,foto:"../img/aretas_5.jpg",descripcion:"aretas personalizadas"},
         {nombre:"bolso",precio:300000,foto:"../img/bolso_3.webp",descripcion:"bolso de todos los estilos deseados"},
         {nombre:"cartuchera",precio:600000,foto:"../img/cartuchera_2.webp",descripcion:"cartuchera de todos los estilos y tamaños"},
-        {nombre:"buso",precio:700000,foto:"../img/buso_2.webp",descripcion:"buso de todos los estiloss"},
+        {nombre:"buso",precio:700000,foto:"../img/buso_3.webp",descripcion:"buso de todos los estiloss"},
         {nombre:"zapatos",precio:800000,foto:"../img/zapatos.webp",descripcion:"zapatos personalisado de lilo y stitch"},
         {nombre:"cogin",precio:50000,foto:"../img/cogin_2.webp",descripcion:"personalisa tu cogin como lo desees"},
         {nombre:"cuaderno",precio:100000,foto:"../img/cuaderno_2.webp",descripcion:"variedad de cuadernos con tus estilos favoritos de lilo y stitch"},
         {nombre:"lampara",precio:2000000,foto:"../img/lampara_4.webp",descripcion:"lampara con luz led de stitch"},
         {nombre:"medias",precio:80000,foto:"../img/medias_3.webp",descripcion:"medias de tus estilos favoritos de lilo y stitch"},
-        {nombre:"pijama",precio:7000000,foto:"../img/pijama_2.webp",descripcion:"pijamas enteras de stitch y angela"},
+        {nombre:"pijama",precio:7000000,foto:"../img/pijama_3.jpg",descripcion:"pijamas enteras de stitch y angela"},
         {nombre:"pijama dos piesas",precio:500000,foto:"../img/pijama_2piesas_2.jpg",descripcion:"pijamas de dos piesas"},
         {nombre:"sandalias",precio:120000,foto:"../img/sandalias_2.webp",descripcion:"sandalias de lilo y stitch"},
         {nombre:"pop",precio:50000,foto:"../img/pop_2.webp",descripcion:"pop de stitch"},
@@ -37,7 +37,7 @@ export function llenarTienda(){
     columna.classList.add("col")
 
     let tarjeta=document.createElement("div")
-    tarjeta.classList.add("btn-outline-danger")
+    tarjeta.classList.add("btn-outline-success")
     tarjeta.classList.add("card")
     tarjeta.classList.add("h-100")
     
@@ -45,6 +45,7 @@ export function llenarTienda(){
     let imagen=document.createElement("img")
     imagen.classList.add("card-img-top")
     imagen.classList.add("p-3")
+    imagen.classList.add("h-100")
     imagen.src=producto.foto
 
     let separador=document.createElement("hr")
@@ -54,6 +55,7 @@ export function llenarTienda(){
 
 
     let nombre=document.createElement("h4")
+    nombre.classList.add("btn-outline-info")
     nombre.classList.add("dark")
     nombre.classList.add("fw-bold")
     nombre.classList.add("text-center")
@@ -61,19 +63,21 @@ export function llenarTienda(){
     nombre.textContent=producto.nombre
 
     let precio=document.createElement("h6")
-    precio.classList.add("btn-outline-danger")
+    precio.classList.add("btn-outline-dark")
+    precio.classList.add("info")
+    precio.classList.add("fw-bold")
     precio.classList.add("text-center")
-    precio.classList.add("text-muted")
+    
     precio.textContent="$"+producto.precio
+
+    
     
     let botonAmpliarInfo=document.createElement("button")
     botonAmpliarInfo.setAttribute("type","button")
     botonAmpliarInfo.classList.add("btn")
     botonAmpliarInfo.classList.add("btn-outline-dark")
-    botonAmpliarInfo.classList.add("mx-2")
-    botonAmpliarInfo.classList.add("h-100")
-    botonAmpliarInfo.classList.add("mb-2")
-    
+    botonAmpliarInfo.classList.add("mx-3")
+    botonAmpliarInfo.classList.add("mb-3")
     botonAmpliarInfo.textContent="ver producto"
     
     
@@ -89,7 +93,7 @@ export function llenarTienda(){
         
 
 
-        console.log(productos);
+        //console.log(productos);
 
     })
 

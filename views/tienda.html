@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="animate__animated animate__rubberBand">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Lilo Y Stitch  <i class="fas fa-ethernet"></i></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,12 +20,18 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
               </li>
-              
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <i class="fas fa-cart-arrow-down fa-2x"></i>
+                  <span id="pildora" class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-success invisible">
+                    99+
+                  </span>
+                </a>
+              </li>
+            </ul>
+          
           </div>
         </div>
       </nav>
@@ -43,7 +49,7 @@
       <div class="modal fade" id="modalinfoproducto">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header bg-primary">
+            <div class="modal-header bg-pink">
               <h5 class="modal-title">tienda lilo y stitch</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -53,18 +59,18 @@
                 <img src="../img/peluche_pequeños_2.webp" alt="" class="img-fluid w-100" id="imagenProducto">
               </div>
               <div class="col 12 col-md-8"> 
-                <h5 id="nombreProducto">NOMBRE DEL PRODUCTO</h5>
+                <h4 id="nombreProducto">NOMBRE DEL PRODUCTO</h4>
                 <h5 id="precioProducto">PRECIO</h5>
                 <h6 id="descripcionProducto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur libero harum fuga, quo, odio esse in repellat reprehenderit asperiores quisquam doloribus blanditiis rem. Eligendi possimus tempore cupiditate alias vero numquam!</h6>
                 <div class="mb-3">
                   <label class="form-label">CANTIDAD</label>
-                  <input type="number" class="form-control" id="cantidasProducto" value="0" min="0">
+                  <input type="number" class="form-control" id="cantidadProducto" value="1" min="0">
                 </div>
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Añadir al carrito</button>
+              <button type="button" class="btn btn-primary" id="bottonagregarCarrito">Añadir al carrito</button>
             </div>
           </div>
         </div>
