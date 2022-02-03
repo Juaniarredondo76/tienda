@@ -49,7 +49,7 @@ export function llenarTienda(){
     imagen.src=producto.foto
 
     let separador=document.createElement("hr")
-    separador.classList.add("w-50")
+    separador.classList.add("w-100")
     separador.classList.add("mx-auto")    
     separador.classList.add("d-block")
 
@@ -62,7 +62,7 @@ export function llenarTienda(){
     nombre.classList.add("max-3")
     nombre.textContent=producto.nombre
 
-    let precio=document.createElement("h6")
+    let precio=document.createElement("h5")
     precio.classList.add("btn-outline-dark")
     precio.classList.add("info")
     precio.classList.add("fw-bold")
@@ -70,8 +70,11 @@ export function llenarTienda(){
     
     precio.textContent="$"+producto.precio
 
-    
-    
+    let descripcion=document.createElement("h6")
+    descripcion.classList.add("text-center")
+    descripcion.classList.add("invisible")
+    descripcion.textContent=producto.descripcion
+
     let botonAmpliarInfo=document.createElement("button")
     botonAmpliarInfo.setAttribute("type","button")
     botonAmpliarInfo.classList.add("btn")
@@ -87,12 +90,10 @@ export function llenarTienda(){
         tarjeta.appendChild(nombre)
         tarjeta.appendChild(precio)
         tarjeta.appendChild(botonAmpliarInfo)
+        tarjeta.appendChild(descripcion)
         columna.appendChild(tarjeta)
         flila.appendChild(columna)
-
         
-
-
         //console.log(productos);
 
     })

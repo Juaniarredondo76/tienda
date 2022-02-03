@@ -23,7 +23,9 @@ export function  ampliarInfoProducto(event){
 
         let etiquetaImagenProducto=document.getElementById("imagenProducto")
         etiquetaImagenProducto.src=producto.foto
-
-        return producto
+        
+        let etiquetaDescripcionProducto=document.getElementById("descripcionProducto")
+        etiquetaDescripcionProducto.textContent=producto.descripcion
     }
+    return producto
 }
