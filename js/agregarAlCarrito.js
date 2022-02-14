@@ -14,6 +14,8 @@ export function agregarCarrito(carrito){
        
         console.log(producto.cantidad)
         contador=contador+Number(producto.cantidad)
+
+    
     })
         
     pildora.textContent=contador
